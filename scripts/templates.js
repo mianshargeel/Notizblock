@@ -38,7 +38,7 @@ function getNotesForwardToTrash(index) {
   
   trashNotesTitle.push(trashedTitle);
   trashNotes.push(trashedNotes);
-  //we are forwarding note from Archive to Trash keeping rendering all three section[note + Archive + trash]
+ 
   renderNotes();
   trashNotesRender();
   archiveNotesRender();
