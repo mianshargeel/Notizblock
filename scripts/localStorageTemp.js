@@ -1,4 +1,4 @@
-//i have created these function to connent with localstorage but ist not working
+//i have created these functions the App to connent with localstorage. 
 
 function init() { //loading in Body-tag at onloada-function
   // Check if localStorage has data
