@@ -29,20 +29,24 @@ function getNotesToArchive(index) {
   
   archiveNotesTitle.push(archivedTitle);
   archiveNotes.push(archivedNotes);
+   setToLocalStorage();//Values of these two arrays setting in localstorage
   renderNotes();
   archiveNotesRender();
 }
+
 function getNotesForwardToTrash(index) {
   let trashedTitle = archiveNotesTitle.splice(index, 1);
   let trashedNotes = archiveNotes.splice(index, 1);
   
   trashNotesTitle.push(trashedTitle);
   trashNotes.push(trashedNotes);
- 
+
+  setToLocalStorage();//Values of these two arrays setting in localstorage
   renderNotes();
   trashNotesRender();
   archiveNotesRender();
 }
+
 function fromArchiveToNote(index) {
   let titleOfNotes = archiveNotesTitle.splice(index, 1);
   let contentOfNotes = archiveNotes.splice(index, 1);
@@ -50,6 +54,7 @@ function fromArchiveToNote(index) {
   notesTitle.push(titleOfNotes);
   notesContent.push(contentOfNotes);
   
+   setToLocalStorage();//Values of these two arrays setting in localstorage
   renderNotes();
   archiveNotesRender();
 }

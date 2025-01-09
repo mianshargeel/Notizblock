@@ -2,6 +2,18 @@ header{
   height: 90px;
   background-color: #040809;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 50px;
+}
+.heading{
+  font-size: 50px;
+}
+.menu-list{
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 main{
   display: flex;
@@ -24,7 +36,11 @@ main{
   font-size: 20px;
   border: none;
   border-radius: 7px;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.9));
   
+}
+.input-fields input:hover{
+  transform: scale(0.99);
 }
 #notiz-btn{
   padding: 15px;
@@ -32,6 +48,11 @@ main{
   font-size: 25px;
   border: none;
   border-radius: 7px;
+  cursor: pointer;
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.9));
+}
+#notiz-btn:hover{
+  transform: scale(0.99);
 }
 #notes-field{
   display: flex;
@@ -49,8 +70,10 @@ main{
   gap: 30px;
   border: none;
   border-radius: 7px;
-  filter: drop-shadow(0 0 0 rgb(0 0 0, 0.9));
-  
+  filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.9));
+}
+.notes-heading:hover{
+  transform:  scaleY(0.99);
 }
 #trash-field{
   display: flex;
@@ -70,6 +93,7 @@ main{
     color: white;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 #archiv-field{

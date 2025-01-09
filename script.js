@@ -4,6 +4,7 @@ let trashNotesTitle = [];
 let trashNotes = [];
 
 function renderNotes() {
+  // init() //the function from local
   let fieldOfNotes = document.getElementById('notes-field');  
   fieldOfNotes.innerHTML = '';
 
@@ -22,6 +23,7 @@ function getNotes(index) {
     </div>
     `;
 }
+
 function toAddNotes() {
   let titleInputRef = document.getElementById('title-input');
   let contentInputRef = document.getElementById('content-input');
@@ -31,6 +33,7 @@ function toAddNotes() {
   if (val1 !== '' && val2 !== '') {
     notesTitle.push(val1);
     notesContent.push(val2);
+    setToLocalStorage();//Values of these two arrays setting in localstorage
     renderNotes();
   } else {
     alert('Please enter the both Title and Content Fields');
@@ -67,6 +70,7 @@ function getNotesToTrash(index) {
   
   trashNotesTitle.push(trashedTitle);
   trashNotes.push(trashedNotes);
+  setToLocalStorage();//Values of these two arrays setting in localstorage
   renderNotes();
   trashNotesRender();
 }
@@ -85,6 +89,7 @@ function fromTrashToNote(index) {
   notesTitle.push(titleOfNotes);
   notesContent.push(contentOfNotes);
   
+   setToLocalStorage();//Values of these two arrays setting in localstorage
   renderNotes();
   trashNotesRender();
   archiveNotesRender();
